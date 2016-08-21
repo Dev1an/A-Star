@@ -26,11 +26,17 @@ view.presentScene(scene)
 scene.backgroundColor = NSColor(red:0.97, green:0.97, blue:0.97, alpha:1.00)
 
 var nodes = SKNode()
-func createCircle(x: CGFloat, y: CGFloat) -> Simple2DNode {
+func createCircle(x: CGFloat, y: CGFloat, label: String) -> Simple2DNode {
     let circle = Simple2DNode(circleOfRadius: 3)
     (circle.position.x, circle.position.y) = (x, y)
     circle.fillColor = .red
     nodes.addChild(circle)
+    
+    let label = SKLabelNode(text: label)
+    label.fontSize = 12
+    (label.position.x, label.position.y) = (x, y+3)
+    label.fontColor = .red
+    nodes.addChild(label)
     return circle
 }
 func createConnection(from source: Simple2DNode, to target: Simple2DNode) {
@@ -45,11 +51,11 @@ func createConnection(from source: Simple2DNode, to target: Simple2DNode) {
 }
 nodes.position = CGPoint(x: 3, y: 3)
 
-let c1 = createCircle(x: 50, y: 0)
-let c2 = createCircle(x: 50, y: 65)
-let c3 = createCircle(x: 30, y: 80)
-let c4 = createCircle(x: 65, y: 70)
-let c5 = createCircle(x: 65, y: 50)
+let c1 = createCircle(x: 50, y: 0, label: "1")
+let c2 = createCircle(x: 50, y: 65, label: "2")
+let c3 = createCircle(x: 30, y: 80, label: "3")
+let c4 = createCircle(x: 65, y: 70, label: "4")
+let c5 = createCircle(x: 65, y: 50, label: "5")
 
 createConnection(from: c1, to: c3)
 createConnection(from: c3, to: c4)
@@ -58,6 +64,6 @@ createConnection(from: c4, to: c2)
 createConnection(from: c1, to: c5)
 createConnection(from: c5, to: c2)
 
-//c1.findPath(to: c4)
+c1.findPath(to: c4)
 
 scene.addChild(nodes)
