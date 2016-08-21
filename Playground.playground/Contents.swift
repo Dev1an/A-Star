@@ -8,7 +8,10 @@ final class Simple2DNode: SKShapeNode, GraphNode {
     var connectedNodes = Set<Simple2DNode>()
     
     func cost(to node: Simple2DNode) -> Float {
-        return Float(hypot((position.x - node.position.x), (position.y - node.position.y)))
+        return Float(hypot(
+            (position.x - node.position.x),
+            (position.y - node.position.y)
+        ))
     }
     
     func estimatedCost(to node: Simple2DNode) -> Float {

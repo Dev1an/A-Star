@@ -35,7 +35,7 @@ public protocol GraphNode: Hashable {
     
     /**
      * Returns the estimated heuristic cost to reach the indicated node from this node
-     * @param the end point of the edge who's cost is to be estimated
+     * @param node the end point of the edge who's cost is to be estimated
      */
     func estimatedCost(to node: Self) -> Float
     
