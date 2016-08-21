@@ -25,37 +25,23 @@ view.presentScene(scene)
 
 scene.backgroundColor = NSColor(red:0.97, green:0.97, blue:0.97, alpha:1.00)
 
-var nodes = SKNode()
-func createCircle(x: CGFloat, y: CGFloat, label: String) -> Simple2DNode {
-    let circle = Simple2DNode(circleOfRadius: 3)
-    (circle.position.x, circle.position.y) = (x, y)
-    circle.fillColor = .red
-    nodes.addChild(circle)
-    
-    let label = SKLabelNode(text: label)
-    label.fontSize = 12
-    (label.position.x, label.position.y) = (x, y+3)
-    label.fontColor = .red
-    nodes.addChild(label)
-    return circle
+func makeCircle(x: CGFloat, y: CGFloat, label: String) -> Simple2DNode {
+    return Simple2DNode(circleOfRadius: 3)
+        .setup(x: x, y: y, label: label) as! Simple2DNode
 }
+
 func createConnection(from source: Simple2DNode, to target: Simple2DNode) {
     source.connectedNodes.insert(target)
-    let shape = SKShapeNode()
-    let line = CGMutablePath()
-    line.move(to: source.position)
-    line.addLine(to: target.position)
-    shape.path = line
-    shape.strokeColor = .darkGray
-    nodes.insertChild(shape, at: 0)
+    let ends = EndPoints((source, target))
+    connections[ends] = directedLineBetween(endPoints: ends)
 }
-nodes.position = CGPoint(x: 3, y: 3)
+rootNode.position = CGPoint(x: 3, y: 3)
 
-let c1 = createCircle(x: 50, y: 0, label: "1")
-let c2 = createCircle(x: 50, y: 65, label: "2")
-let c3 = createCircle(x: 30, y: 80, label: "3")
-let c4 = createCircle(x: 65, y: 70, label: "4")
-let c5 = createCircle(x: 65, y: 50, label: "5")
+let c1 = makeCircle(x: 50, y: 0,  label: "1")
+let c2 = makeCircle(x: 50, y: 65, label: "2")
+let c3 = makeCircle(x: 30, y: 80, label: "3")
+let c4 = makeCircle(x: 65, y: 70, label: "4")
+let c5 = makeCircle(x: 90, y: 50, label: "5")
 
 createConnection(from: c1, to: c3)
 createConnection(from: c3, to: c4)
@@ -64,6 +50,9 @@ createConnection(from: c4, to: c2)
 createConnection(from: c1, to: c5)
 createConnection(from: c5, to: c2)
 
-c1.findPath(to: c4)
+let path = c1.findPath(to: c2)
+for index in 1..<path.count {
+    connections[EndPoints((path[index-1], path[index]))]?.strokeColor = .red
+}
 
-scene.addChild(nodes)
+scene.addChild(rootNode)
