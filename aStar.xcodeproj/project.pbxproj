@@ -10,6 +10,8 @@
 		742513631D679CCC005E198C /* aStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742513591D679CCC005E198C /* aStar.framework */; };
 		742513681D679CCC005E198C /* aStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513671D679CCC005E198C /* aStarTests.swift */; };
 		7425136A1D679CCC005E198C /* aStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7425135C1D679CCC005E198C /* aStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		742513761D679D12005E198C /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513751D679D12005E198C /* Node.swift */; };
+		742513781D69DEDC005E198C /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513771D69DEDC005E198C /* SortedArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,9 @@
 		742513621D679CCC005E198C /* aStarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aStarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		742513671D679CCC005E198C /* aStarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aStarTests.swift; sourceTree = "<group>"; };
 		742513691D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		742513751D679D12005E198C /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		742513771D69DEDC005E198C /* SortedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
+		7426D2A11D69EE3500C9F136 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = aStar/Playground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 		7425134F1D679CCC005E198C = {
 			isa = PBXGroup;
 			children = (
+				7426D2A11D69EE3500C9F136 /* Playground.playground */,
 				7425135B1D679CCC005E198C /* aStar */,
 				742513661D679CCC005E198C /* aStarTests */,
 				7425135A1D679CCC005E198C /* Products */,
@@ -72,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				7425135C1D679CCC005E198C /* aStar.h */,
+				742513751D679D12005E198C /* Node.swift */,
+				742513771D69DEDC005E198C /* SortedArray.swift */,
 				7425135D1D679CCC005E198C /* Info.plist */,
 			);
 			path = aStar;
@@ -149,6 +157,7 @@
 					742513581D679CCC005E198C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7TD9A665TC;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					742513611D679CCC005E198C = {
@@ -198,6 +207,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742513781D69DEDC005E198C /* SortedArray.swift in Sources */,
+				742513761D679D12005E198C /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +330,7 @@
 		7425136E1D679CCC005E198C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -333,6 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -340,6 +353,7 @@
 		7425136F1D679CCC005E198C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -361,6 +375,7 @@
 		742513711D679CCC005E198C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7TD9A665TC;
 				INFOPLIST_FILE = aStarTests/Info.plist;
@@ -374,6 +389,7 @@
 		742513721D679CCC005E198C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7TD9A665TC;
 				INFOPLIST_FILE = aStarTests/Info.plist;
@@ -403,6 +419,7 @@
 				7425136F1D679CCC005E198C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		742513701D679CCC005E198C /* Build configuration list for PBXNativeTarget "aStarTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +428,7 @@
 				742513721D679CCC005E198C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
