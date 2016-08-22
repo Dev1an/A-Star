@@ -33,7 +33,7 @@
 		742513691D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		742513751D679D12005E198C /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		742513771D69DEDC005E198C /* SortedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
-		74CA42501D6A452800E79D94 /* 2DNode.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2DNode.playground; sourceTree = "<group>"; };
+		74CA42501D6A452800E79D94 /* DotGraph.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DotGraph.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		7425134F1D679CCC005E198C = {
 			isa = PBXGroup;
 			children = (
-				74CA42501D6A452800E79D94 /* 2DNode.playground */,
+				74CA42501D6A452800E79D94 /* DotGraph.playground */,
 				7425135B1D679CCC005E198C /* aStar */,
 				742513661D679CCC005E198C /* aStarTests */,
 				7425135A1D679CCC005E198C /* Products */,

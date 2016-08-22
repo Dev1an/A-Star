@@ -20,9 +20,30 @@ public class Scene: SKScene {
         let location = event.location(in: self)
         if let dot = selection {
             dot.run(SKAction.move(by: location - previousLocation, duration: 0))
+            for line in dot.connectedLines {
+                line.run(SKAction.customAction(withDuration: 0) { _, _ in
+                    line.updateLength()
+                })
+            }
+			drawPath()
         }
        previousLocation = location
     }
+	
+	var lines = Set<DirectedLine>()
+	public var updateConnections: (() -> Set<DirectedLine>)?
+	
+	public func drawPath() {
+		for line in lines {
+			line.strokeColor = .darkGray
+		}
+		if let update = updateConnections {
+			lines = update()
+			for line in lines {
+				line.strokeColor = .red
+			}
+		}
+	}
 }
 
 extension CGPoint {

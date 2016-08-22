@@ -23,7 +23,7 @@ let scene = Scene(size: CGSize(width: 100, height: 100))
 
 scene.scaleMode = SKSceneScaleMode.aspectFit
 scene.backgroundColor = NSColor(red:0.97, green:0.97, blue:0.97, alpha:1.00)
-//PlaygroundPage.current.liveView = view
+PlaygroundPage.current.liveView = view
 view.presentScene(scene)
 
 func createConnection(from source: Node, to target: Node) {
@@ -46,10 +46,13 @@ createConnection(from: c1, to: c5)
 createConnection(from: c5, to: c2)
 createConnection(from: c5, to: c4)
 
-let path = c1.findPath(to: c2)
-for index in 1..<path.count {
-    connections[path[index-1]]?[path[index]]?.strokeColor = .red
-}
-
 scene.addChild(rootNode)
-print("Hurray")
+scene.updateConnections = {
+	let nodes = c1.findPath(to: c2)
+	var lines = Set<DirectedLine>()
+	for i in 1..<nodes.count {
+		lines.insert(connections[nodes[i-1]]![nodes[i]]!)
+	}
+	return lines
+}
+scene.drawPath()
