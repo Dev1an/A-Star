@@ -1,4 +1,7 @@
 import SpriteKit
+import Dispatch
+
+let queue = DispatchQueue(label: "pathfinding", qos: .background, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
 
 public class Scene: SKScene {
     var selection: RedDot?
@@ -33,15 +36,23 @@ public class Scene: SKScene {
 	var lines = Set<DirectedLine>()
 	public var updateConnections: (() -> Set<DirectedLine>)?
 	
+	var calculation: DispatchWorkItem?
 	public func drawPath() {
-		for line in lines {
-			line.strokeColor = .darkGray
-		}
 		if let update = updateConnections {
-			lines = update()
-			for line in lines {
-				line.strokeColor = .red
-			}
+			calculation?.cancel()
+			calculation = DispatchWorkItem(block: {
+				let newLines = update()
+				DispatchQueue.main.async {
+					for line in self.lines {
+						line.strokeColor = .darkGray
+					}
+					self.lines = newLines
+					for line in self.lines {
+						line.strokeColor = .red
+					}
+				}
+			})
+			queue.async(execute: calculation!)
 		}
 	}
 }
