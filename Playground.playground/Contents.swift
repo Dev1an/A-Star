@@ -4,18 +4,18 @@ import SpriteKit
 import PlaygroundSupport
 
 final class Simple2DNode: SKShapeNode, GraphNode {
-    var connectedNodes = Set<Simple2DNode>()
-    
-    func cost(to node: Simple2DNode) -> Float {
-        return Float(hypot(
-            (position.x - node.position.x),
-            (position.y - node.position.y)
-        ))
-    }
-    
-    func estimatedCost(to node: Simple2DNode) -> Float {
-        return cost(to: node)
-    }
+	var connectedNodes = Set<Simple2DNode>()
+	
+	func cost(to node: Simple2DNode) -> Float {
+		return Float(hypot(
+			(position.x - node.position.x),
+			(position.y - node.position.y)
+		))
+	}
+	
+	func estimatedCost(to node: Simple2DNode) -> Float {
+		return cost(to: node)
+	}
 }
 
 let view = SKView(frame: NSRect(x: 0, y: 0, width: 103, height: 103))
@@ -28,14 +28,14 @@ view.presentScene(scene)
 scene.backgroundColor = NSColor(red:0.97, green:0.97, blue:0.97, alpha:1.00)
 
 func makeCircle(x: CGFloat, y: CGFloat, label: String) -> Simple2DNode {
-    return Simple2DNode(circleOfRadius: 3)
-        .setup(x: x, y: y, label: label) as! Simple2DNode
+	return Simple2DNode(circleOfRadius: 3)
+		.setup(x: x, y: y, label: label) as! Simple2DNode
 }
 
 func createConnection(from source: Simple2DNode, to target: Simple2DNode) {
-    source.connectedNodes.insert(target)
-    let ends = EndPoints((source, target))
-    connections[ends] = directedLineBetween(endPoints: ends)
+	source.connectedNodes.insert(target)
+	let ends = EndPoints((source, target))
+	connections[ends] = directedLineBetween(endPoints: ends)
 }
 rootNode.position = CGPoint(x: 3, y: 3)
 
@@ -54,7 +54,7 @@ createConnection(from: c5, to: c2)
 
 let path = c1.findPath(to: c2)
 for index in 1..<path.count {
-    connections[EndPoints((path[index-1], path[index]))]?.strokeColor = .red
+	connections[EndPoints((path[index-1], path[index]))]?.strokeColor = .red
 }
 
 scene.addChild(rootNode)
