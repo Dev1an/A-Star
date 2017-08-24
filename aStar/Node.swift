@@ -7,9 +7,10 @@
 //
 
 
-/// Declares the requirements for optimal pathfinding in a directed graph of nodes.
+/// Declares the requirements for optimal pathfinding in a directed graph of nodes and the implementation of the A* algorithm.
 public protocol GraphNode: Hashable {
-    
+	// MARK: Optimal path finding requirements
+	
     /**
      * List of other graph nodes that this node has an edge leading to.
      */
@@ -81,8 +82,10 @@ extension Step: Hashable, Equatable, Comparable {
 
 }
 
+
 extension GraphNode {
-	
+	// MARK: A* Implementation
+
     /// Attempts to find the optimal path between this node and the indicated goal node.
 	/// If such a path exists, it is returned in start to end order.
 	/// If it doesn't exist, the array returned will be empty.
