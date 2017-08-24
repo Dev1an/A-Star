@@ -7,31 +7,12 @@
 //
 
 public protocol GraphNode: Hashable {
-
     
     /**
      * List of other graph nodes that this node has an edge leading to.
      */
     var connectedNodes: Set<Self> { get }
-    
-    
-    /**
-     * Add a connection to a group of other nodes indicating those nodes can be reached from this node.
-     * A new connection is not created if it already exists.
-     * @param array of nodes that are end points for their respective connections
-     * @param bidirectional should a connection also be added connecting the destination node back to this node?
-     */
-    // func addConnections(to nodes: [GraphNode], bidirectional: Bool)
-    
-    
-    /**
-     * Removes connections to a group of other nodes indicating those nodes can no longer be reached from this node.
-     * Nothing happens if a particular connection does not exist.
-     * @param node the end point of the edge to be removed
-     * @param bidirectional should the connection also be added the destination node back to this node also be removed if it exists?
-     */
-    // func removeConnections(to nodes: [GraphNode], bidirectional: Bool)
-    
+	
     
     /**
      * Returns the estimated heuristic cost to reach the indicated node from this node

@@ -55,8 +55,8 @@ public func directedLineBetween(endPoints: EndPoints) -> SKShapeNode {
 	)
 	line.move(to: center)
 	
-	let c1 = CGFloat(  -M_PI_4) - rotation
-	let c2 = CGFloat(-3*M_PI_4) - rotation
+	let c1 = CGFloat(-1/4) * .pi - rotation
+	let c2 = CGFloat(-3/4) * .pi - rotation
 	
 	line.addLine(to: CGPoint(x: center.x + 3*cos(c1), y: center.y + 3*sin(c1)))
 	line.move(to: center)
