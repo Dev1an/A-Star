@@ -6,6 +6,8 @@
 //  Copyright © 2016 Damiaan Dufaux. All rights reserved.
 //
 
+
+/// Declares the requirements for optimal pathfinding in a directed graph of nodes.
 public protocol GraphNode: Hashable {
     
     /**
