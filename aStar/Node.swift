@@ -37,13 +37,13 @@ class Step<Node: GraphNode> {
     init(from start: Node, to destination: Node, goal: Node) {
         node = destination
         stepCost = start.cost(to: destination)
-        goalCost = destination.cost(to: goal)
+        goalCost = destination.estimatedCost(to: goal)
     }
     
     init(destination: Node, previous: Step<Node>, goal: Node) {
         (node, self.previous) = (destination, previous)
         stepCost = previous.stepCost + previous.node.cost(to: destination)
-        goalCost = destination.cost(to: goal)
+        goalCost = destination.estimatedCost(to: goal)
     }
     
     func cost() -> Float {
