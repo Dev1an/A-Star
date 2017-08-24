@@ -13,17 +13,16 @@ public protocol GraphNode: Hashable {
      */
     var connectedNodes: Set<Self> { get }
 	
-    
-    /**
-     * Returns the estimated heuristic cost to reach the indicated node from this node
-     * @param node the end point of the edge who's cost is to be estimated
-     */
+	
+    /// Returns the estimated heuristic cost to reach the indicated node from this node
+    ///
+    /// - Parameter node: the end point of the edge who's cost is to be estimated
+    /// - Returns: the heuristic cost
     func estimatedCost(to node: Self) -> Float
     
-    
-    /**
-     * Returns the actual cost to reach the indicated node from this node
-     */
+	
+    /// - Parameter node: the destination node
+    /// - Returns: the actual cost to reach the indicated node from this node
     func cost(to node: Self) -> Float
 
 }
@@ -81,12 +80,13 @@ extension Step: Hashable, Equatable, Comparable {
 }
 
 extension GraphNode {
-    /**
-     * Attempts to find the optimal path between this node and the indicated goal node.
-     * If such a path exists, it is returned in start to end order.
-     * If it doesn't exist, the array returned will be empty.
-     * @param goalNode the goal node of the pathfinding attempt
-     */
+	
+    /// Attempts to find the optimal path between this node and the indicated goal node.
+	/// If such a path exists, it is returned in start to end order.
+	/// If it doesn't exist, the array returned will be empty.
+    ///
+    /// - Parameter goalNode: the goal node of the pathfinding attempt
+    /// - Returns: the optimal path between this node and the indicated goal node
     public func findPath(to goalNode: Self) -> [Self] {
         var possibleSteps = [Step<Self>]()
         var eliminatedNodes: Set = [self]
@@ -126,12 +126,12 @@ extension GraphNode {
         
         return path
     }
-    
-    
-    /**
-     * As with findPathToNode: except this node is the goal node and a startNode is specified
-     * @param startNode the start node of the pathfinding attempt
-     */
+	
+	
+    /// As with findPathToNode: except this node is the goal node and a startNode is specified
+    ///
+    /// - Parameter startNode: the start node of the pathfinding attempt
+    /// - Returns: the optimal path between the indicated start node and this node
     public func findPath(from startNode: Self) -> [Self] {
         return startNode.findPath(to: self)
     }

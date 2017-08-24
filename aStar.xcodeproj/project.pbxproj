@@ -40,6 +40,7 @@
 		7443FCEC1E26D448005EA77C /* aStarMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = aStarMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7443FCEE1E26D449005EA77C /* aStarMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aStarMobile.h; sourceTree = "<group>"; };
 		7443FCEF1E26D449005EA77C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74D2FBD01F4EFBFB00A48C44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		7425134F1D679CCC005E198C = {
 			isa = PBXGroup;
 			children = (
+				74D2FBD01F4EFBFB00A48C44 /* README.md */,
 				7432155C1E2645C900B30684 /* MyPlayground.playground */,
 				7425135B1D679CCC005E198C /* aStar */,
 				742513661D679CCC005E198C /* aStarTests */,
