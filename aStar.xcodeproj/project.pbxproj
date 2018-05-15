@@ -36,10 +36,10 @@
 		742513691D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		742513751D679D12005E198C /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		742513771D69DEDC005E198C /* SortedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
-		7432155C1E2645C900B30684 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7443FCEC1E26D448005EA77C /* aStarMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = aStarMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7443FCEE1E26D449005EA77C /* aStarMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aStarMobile.h; sourceTree = "<group>"; };
 		7443FCEF1E26D449005EA77C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7446343A20AAFB3A00B63771 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		74D2FBD01F4EFBFB00A48C44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				74D2FBD01F4EFBFB00A48C44 /* README.md */,
-				7432155C1E2645C900B30684 /* MyPlayground.playground */,
+				7446343A20AAFB3A00B63771 /* Playground.playground */,
 				7425135B1D679CCC005E198C /* aStar */,
 				742513661D679CCC005E198C /* aStarTests */,
 				7443FCED1E26D449005EA77C /* aStarMobile */,

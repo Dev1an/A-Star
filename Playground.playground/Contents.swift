@@ -19,10 +19,10 @@ final class Simple2DNode: SKShapeNode, GraphNode {
 	}
 }
 
-let view = SKView(frame: NSRect(x: 0, y: 0, width: 103, height: 103))
+let view = SKView(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
 PlaygroundPage.current.liveView = view
 
-let scene = SKScene(size: CGSize(width: 100, height: 100))
+let scene = SKScene(size: CGSize(width: 200, height: 200))
 scene.scaleMode = SKSceneScaleMode.aspectFit
 view.presentScene(scene)
 
