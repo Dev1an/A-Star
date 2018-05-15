@@ -40,11 +40,11 @@ func createConnection(from source: Simple2DNode, to target: Simple2DNode) {
 }
 rootNode.position = CGPoint(x: 3, y: 3)
 
-let c1 = makeCircle(x: 50, y: 0,  label: "1")
-let c2 = makeCircle(x: 50, y: 65, label: "2")
-let c3 = makeCircle(x: 30, y: 80, label: "3")
-let c4 = makeCircle(x: 65, y: 70, label: "4")
-let c5 = makeCircle(x: 90, y: 50, label: "5")
+let c1 = makeCircle(x: 100, y: 5,  label: "1")
+let c2 = makeCircle(x: 100, y: 130, label: "2")
+let c3 = makeCircle(x: 60, y: 160, label: "3")
+let c4 = makeCircle(x: 130, y: 140, label: "4")
+let c5 = makeCircle(x: 180, y: 100, label: "5")
 
 createConnection(from: c1, to: c3)
 createConnection(from: c3, to: c4)
