@@ -7,7 +7,7 @@
 //
 
 
-/// Declares the requirements for optimal pathfinding in a directed graph of nodes and the implementation of the A* algorithm.
+/// This protocol declares the requirements for optimal pathfinding in a directed graph of nodes and implements the A* algorithm via an extension.
 public protocol GraphNode: Hashable {
 	// MARK: Optimal pathfinding requirements
 	

@@ -52,11 +52,11 @@
             <h1>GraphNode</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">GraphNode</span><span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">GraphNode</span><span class="p">:</span> <span class="kt">Hashable</span></code></pre>
 
                 </div>
               </div>
-            <p>Declares the requirements for optimal pathfinding in a directed graph of nodes and the implementation of the A* algorithm.</p>
+            <p>This protocol declares the requirements for optimal pathfinding in a directed graph of nodes and implements the A* algorithm via an extension.</p>
 
           </section>
           <section class="section task-group-section">
@@ -72,9 +72,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5aStar9GraphNodeP14connectedNodess3SetVyxGv"></a>
+                    <a name="/s:5aStar9GraphNodeP14connectedNodess3SetVyxGvp"></a>
                     <a name="//apple_ref/swift/Property/connectedNodes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5aStar9GraphNodeP14connectedNodess3SetVyxGv">connectedNodes</a>
+                    <a class="token" href="#/s:5aStar9GraphNodeP14connectedNodess3SetVyxGvp">connectedNodes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -89,12 +89,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">connectedNodes</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">connectedNodes</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/f03e665993214a31c8767992b53bfbe249ce7a2c/aStar/Node.swift#L17">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//aStar/Node.swift#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -119,7 +119,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">estimatedCost</span><span class="p">(</span><span class="n">to</span> <span class="nv">node</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">estimatedCost</span><span class="p">(</span><span class="n">to</span> <span class="nv">node</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
 
                         </div>
                       </div>
@@ -147,7 +147,7 @@
                         <p>the heuristic cost</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/f03e665993214a31c8767992b53bfbe249ce7a2c/aStar/Node.swift#L24">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//aStar/Node.swift#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -171,7 +171,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cost</span><span class="p">(</span><span class="n">to</span> <span class="nv">node</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cost</span><span class="p">(</span><span class="n">to</span> <span class="nv">node</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
 
                         </div>
                       </div>
@@ -199,7 +199,7 @@
                         <p>the actual cost to reach the indicated node from this node</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/f03e665993214a31c8767992b53bfbe249ce7a2c/aStar/Node.swift#L29">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//aStar/Node.swift#L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -240,7 +240,7 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findPath</span><span class="p">(</span><span class="n">to</span> <span class="nv">goalNode</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="k">Self</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findPath</span><span class="p">(</span><span class="n">to</span> <span class="nv">goalNode</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="k">Self</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -268,7 +268,7 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
                         <p>the optimal path between this node and the indicated goal node</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/f03e665993214a31c8767992b53bfbe249ce7a2c/aStar/Node.swift#L95-L133">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//aStar/Node.swift#L95-L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -296,7 +296,7 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findPath</span><span class="p">(</span><span class="n">from</span> <span class="nv">startNode</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="k">Self</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findPath</span><span class="p">(</span><span class="n">from</span> <span class="nv">startNode</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="k">Self</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -324,7 +324,7 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
                         <p>the optimal path between the indicated start node and this node</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/f03e665993214a31c8767992b53bfbe249ce7a2c/aStar/Node.swift#L140-L142">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//aStar/Node.swift#L140-L142">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -334,8 +334,8 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-08-24)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
