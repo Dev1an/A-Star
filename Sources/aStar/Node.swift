@@ -56,9 +56,9 @@ class Step<Node: GraphNode> {
 }
 
 extension Step: Hashable, Equatable, Comparable {
-    var hashValue: Int {
-        return node.hashValue
-    }
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(node)
+	}
     
     static func ==(lhs: Step, rhs: Step) -> Bool {
         return lhs.node == rhs.node
