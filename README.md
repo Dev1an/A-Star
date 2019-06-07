@@ -13,6 +13,26 @@ Add pathfinding to your graph just by implementing the 3 requirements of the [Gr
 
 ![Playground](docs/Playground.png)
 
-## Install with swift package manager
+## Swift Package Manager
 
-Add this package to the dependencies of your project using SPM 🎉
+You can now add this package to your project using SPM 🎉
+
+### Using Xcode
+
+Xcode 11 has a new interface to include packages into your existing projects.
+
+- Click `File` → `Swift Packages` → `Add Package Dependency...`
+- Search for aStar and select this repository.
+- Follow the on screen instructions
+
+![Playground](docs/SPM-Xcode.png)
+
+### Manualy editing package file
+
+To include it in your package manually, add the following dependency to your `Package.swift` file.
+
+```swift
+.package(url: "https://github.com/Dev1an/A-Star.git", .branch("master"))
+```
+
+Use `import aStar` to access the APIs.
