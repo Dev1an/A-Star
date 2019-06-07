@@ -27,9 +27,10 @@ public struct EndPoints: Hashable {
 	public init(_ points: (SKShapeNode, SKShapeNode)) {
 		(source, target) = points
 	}
-	
-	public var hashValue: Int {
-		return source.hashValue | target.hashValue
+
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(source)
+		hasher.combine(target)
 	}
 	
 	public static func ==(lhs: EndPoints, rhs: EndPoints) -> Bool {
