@@ -40,7 +40,7 @@ final class Simple2DNode: GraphNode {
 }
 
 
-class aStarTests: XCTestCase {
+class AStarTests: XCTestCase {
     var c1, c2, c3, c4, c5: Simple2DNode!
     
     func createConnection(from source: Simple2DNode, to target: Simple2DNode) {
