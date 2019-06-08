@@ -247,11 +247,11 @@
 			};
 			buildConfigurationList = 742513531D679CCC005E198C /* Build configuration list for PBXProject "AStar" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 7425134F1D679CCC005E198C;
 			productRefGroup = 7425135A1D679CCC005E198C /* Products */;
