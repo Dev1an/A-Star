@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7443FCEB1E26D448005EA77C"
-               BuildableName = "aStarMobile.framework"
-               BlueprintName = "aStarMobile"
-               ReferencedContainer = "container:aStar.xcodeproj">
+               BlueprintIdentifier = "742513581D679CCC005E198C"
+               BuildableName = "AStar macOS.framework"
+               BlueprintName = "AStar macOS"
+               ReferencedContainer = "container:AStar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7443FCEB1E26D448005EA77C"
-            BuildableName = "aStarMobile.framework"
-            BlueprintName = "aStarMobile"
-            ReferencedContainer = "container:aStar.xcodeproj">
+            BlueprintIdentifier = "742513581D679CCC005E198C"
+            BuildableName = "AStar macOS.framework"
+            BlueprintName = "AStar macOS"
+            ReferencedContainer = "container:AStar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7443FCEB1E26D448005EA77C"
-            BuildableName = "aStarMobile.framework"
-            BlueprintName = "aStarMobile"
-            ReferencedContainer = "container:aStar.xcodeproj">
+            BlueprintIdentifier = "742513581D679CCC005E198C"
+            BuildableName = "AStar macOS.framework"
+            BlueprintName = "AStar macOS"
+            ReferencedContainer = "container:AStar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

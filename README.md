@@ -7,7 +7,7 @@ Add pathfinding to your graph just by implementing the 3 requirements of the [Gr
 
 ## Playground
 
-- To try the playground open: aStar.xcodeproj
+- To try the playground open: AStar.xcodeproj
 - Build the framework (`command` + `b`)
 - Click on Playground.playground
 
@@ -22,7 +22,7 @@ You can now add this package to your project using SPM 🎉
 Xcode 11 has a new interface to include packages into your existing projects.
 
 - Click `File` → `Swift Packages` → `Add Package Dependency...`
-- Search for aStar and select this repository.
+- Search for `AStar` and select this repository.
 - Follow the on screen instructions
 
 ![Playground](docs/SPM-Xcode.png)
@@ -35,4 +35,4 @@ To include it in your package manually, add the following dependency to your `Pa
 .package(url: "https://github.com/Dev1an/A-Star.git", .branch("master"))
 ```
 
-Use `import aStar` to access the APIs.
+Use `import AStar` to access the APIs.

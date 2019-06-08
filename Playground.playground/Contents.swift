@@ -1,6 +1,6 @@
 //: Playground - noun: a place where people can play
 
-import aStar
+import AStar
 import SpriteKit
 import PlaygroundSupport
 

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		742513631D679CCC005E198C /* aStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742513591D679CCC005E198C /* aStar.framework */; };
-		742513681D679CCC005E198C /* aStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513671D679CCC005E198C /* aStarTests.swift */; };
-		7425136A1D679CCC005E198C /* aStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7425135C1D679CCC005E198C /* aStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		742513631D679CCC005E198C /* AStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742513591D679CCC005E198C /* AStar.framework */; };
+		742513681D679CCC005E198C /* AStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513671D679CCC005E198C /* AStarTests.swift */; };
+		7425136A1D679CCC005E198C /* AStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7425135C1D679CCC005E198C /* AStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		742513761D679D12005E198C /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513751D679D12005E198C /* Node.swift */; };
 		742513781D69DEDC005E198C /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513771D69DEDC005E198C /* SortedArray.swift */; };
-		7443FCF01E26D449005EA77C /* aStarMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = 7443FCEE1E26D449005EA77C /* aStarMobile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7443FCF01E26D449005EA77C /* AStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7443FCEE1E26D449005EA77C /* AStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7443FCF41E26D465005EA77C /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513751D679D12005E198C /* Node.swift */; };
 		7443FCF51E26D468005EA77C /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513771D69DEDC005E198C /* SortedArray.swift */; };
 /* End PBXBuildFile section */
@@ -28,16 +28,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		742513591D679CCC005E198C /* aStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = aStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7425135C1D679CCC005E198C /* aStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aStar.h; sourceTree = "<group>"; };
+		742513591D679CCC005E198C /* AStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7425135C1D679CCC005E198C /* AStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
 		7425135D1D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		742513621D679CCC005E198C /* aStarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aStarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		742513671D679CCC005E198C /* aStarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aStarTests.swift; sourceTree = "<group>"; };
+		742513621D679CCC005E198C /* AStarTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AStarTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		742513671D679CCC005E198C /* AStarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStarTests.swift; sourceTree = "<group>"; };
 		742513691D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		742513751D679D12005E198C /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		742513771D69DEDC005E198C /* SortedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
-		7443FCEC1E26D448005EA77C /* aStarMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = aStarMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7443FCEE1E26D449005EA77C /* aStarMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aStarMobile.h; sourceTree = "<group>"; };
+		7443FCEC1E26D448005EA77C /* AStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7443FCEE1E26D449005EA77C /* AStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
 		7443FCEF1E26D449005EA77C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7446343A20AAFB3A00B63771 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		74D2FBD01F4EFBFB00A48C44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742513631D679CCC005E198C /* aStar.framework in Frameworks */,
+				742513631D679CCC005E198C /* AStar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +78,7 @@
 				7446343A20AAFB3A00B63771 /* Playground.playground */,
 				7425135B1D679CCC005E198C /* Sources */,
 				742513661D679CCC005E198C /* Tests */,
-				7443FCED1E26D449005EA77C /* aStarMobile */,
+				7443FCED1E26D449005EA77C /* AStar iOS */,
 				7425135A1D679CCC005E198C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,9 +86,9 @@
 		7425135A1D679CCC005E198C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				742513591D679CCC005E198C /* aStar.framework */,
-				742513621D679CCC005E198C /* aStarTests.xctest */,
-				7443FCEC1E26D448005EA77C /* aStarMobile.framework */,
+				742513591D679CCC005E198C /* AStar.framework */,
+				742513621D679CCC005E198C /* AStarTests macOS.xctest */,
+				7443FCEC1E26D448005EA77C /* AStar.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,8 +96,8 @@
 		7425135B1D679CCC005E198C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7425135C1D679CCC005E198C /* aStar.h */,
-				74DF855022AAA1B30051BE5D /* aStar */,
+				7425135C1D679CCC005E198C /* AStar.h */,
+				74DF855022AAA1B30051BE5D /* AStar */,
 				7425135D1D679CCC005E198C /* Info.plist */,
 			);
 			path = Sources;
@@ -107,37 +107,37 @@
 			isa = PBXGroup;
 			children = (
 				74DF854E22AA9DB90051BE5D /* LinuxMain.swift */,
-				74DF854B22AA9D620051BE5D /* aStarTests */,
+				74DF854B22AA9D620051BE5D /* AStarTests */,
 				742513691D679CCC005E198C /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		7443FCED1E26D449005EA77C /* aStarMobile */ = {
+		7443FCED1E26D449005EA77C /* AStar iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7443FCEE1E26D449005EA77C /* aStarMobile.h */,
+				7443FCEE1E26D449005EA77C /* AStar.h */,
 				7443FCEF1E26D449005EA77C /* Info.plist */,
 			);
-			path = aStarMobile;
+			path = "AStar iOS";
 			sourceTree = "<group>";
 		};
-		74DF854B22AA9D620051BE5D /* aStarTests */ = {
+		74DF854B22AA9D620051BE5D /* AStarTests */ = {
 			isa = PBXGroup;
 			children = (
-				742513671D679CCC005E198C /* aStarTests.swift */,
+				742513671D679CCC005E198C /* AStarTests.swift */,
 				74DF854C22AA9DB20051BE5D /* XCTestManifests.swift */,
 			);
-			path = aStarTests;
+			path = AStarTests;
 			sourceTree = "<group>";
 		};
-		74DF855022AAA1B30051BE5D /* aStar */ = {
+		74DF855022AAA1B30051BE5D /* AStar */ = {
 			isa = PBXGroup;
 			children = (
 				742513751D679D12005E198C /* Node.swift */,
 				742513771D69DEDC005E198C /* SortedArray.swift */,
 			);
-			path = aStar;
+			path = AStar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +147,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7425136A1D679CCC005E198C /* aStar.h in Headers */,
+				7425136A1D679CCC005E198C /* AStar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,16 +155,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7443FCF01E26D449005EA77C /* aStarMobile.h in Headers */,
+				7443FCF01E26D449005EA77C /* AStar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		742513581D679CCC005E198C /* aStar */ = {
+		742513581D679CCC005E198C /* AStar macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7425136D1D679CCC005E198C /* Build configuration list for PBXNativeTarget "aStar" */;
+			buildConfigurationList = 7425136D1D679CCC005E198C /* Build configuration list for PBXNativeTarget "AStar macOS" */;
 			buildPhases = (
 				742513541D679CCC005E198C /* Sources */,
 				742513551D679CCC005E198C /* Frameworks */,
@@ -175,14 +175,14 @@
 			);
 			dependencies = (
 			);
-			name = aStar;
+			name = "AStar macOS";
 			productName = aStar;
-			productReference = 742513591D679CCC005E198C /* aStar.framework */;
+			productReference = 742513591D679CCC005E198C /* AStar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		742513611D679CCC005E198C /* aStarTests */ = {
+		742513611D679CCC005E198C /* AStarTests macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 742513701D679CCC005E198C /* Build configuration list for PBXNativeTarget "aStarTests" */;
+			buildConfigurationList = 742513701D679CCC005E198C /* Build configuration list for PBXNativeTarget "AStarTests macOS" */;
 			buildPhases = (
 				7425135E1D679CCC005E198C /* Sources */,
 				7425135F1D679CCC005E198C /* Frameworks */,
@@ -193,14 +193,14 @@
 			dependencies = (
 				742513651D679CCC005E198C /* PBXTargetDependency */,
 			);
-			name = aStarTests;
+			name = "AStarTests macOS";
 			productName = aStarTests;
-			productReference = 742513621D679CCC005E198C /* aStarTests.xctest */;
+			productReference = 742513621D679CCC005E198C /* AStarTests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7443FCEB1E26D448005EA77C /* aStarMobile */ = {
+		7443FCEB1E26D448005EA77C /* AStar iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7443FCF31E26D449005EA77C /* Build configuration list for PBXNativeTarget "aStarMobile" */;
+			buildConfigurationList = 7443FCF31E26D449005EA77C /* Build configuration list for PBXNativeTarget "AStar iOS" */;
 			buildPhases = (
 				7443FCE71E26D448005EA77C /* Sources */,
 				7443FCE81E26D448005EA77C /* Frameworks */,
@@ -211,9 +211,9 @@
 			);
 			dependencies = (
 			);
-			name = aStarMobile;
+			name = "AStar iOS";
 			productName = aStarMobile;
-			productReference = 7443FCEC1E26D448005EA77C /* aStarMobile.framework */;
+			productReference = 7443FCEC1E26D448005EA77C /* AStar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -245,7 +245,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 742513531D679CCC005E198C /* Build configuration list for PBXProject "aStar" */;
+			buildConfigurationList = 742513531D679CCC005E198C /* Build configuration list for PBXProject "AStar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,9 +258,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				742513581D679CCC005E198C /* aStar */,
-				742513611D679CCC005E198C /* aStarTests */,
-				7443FCEB1E26D448005EA77C /* aStarMobile */,
+				742513581D679CCC005E198C /* AStar macOS */,
+				742513611D679CCC005E198C /* AStarTests macOS */,
+				7443FCEB1E26D448005EA77C /* AStar iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742513681D679CCC005E198C /* aStarTests.swift in Sources */,
+				742513681D679CCC005E198C /* AStarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +321,7 @@
 /* Begin PBXTargetDependency section */
 		742513651D679CCC005E198C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 742513581D679CCC005E198C /* aStar */;
+			target = 742513581D679CCC005E198C /* AStar macOS */;
 			targetProxy = 742513641D679CCC005E198C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -378,6 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -434,6 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -459,7 +461,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -482,7 +484,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -526,12 +528,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = aStarMobile/Info.plist;
+				INFOPLIST_FILE = "AStar iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStarMobile;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -549,12 +551,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = aStarMobile/Info.plist;
+				INFOPLIST_FILE = "AStar iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStarMobile;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +568,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		742513531D679CCC005E198C /* Build configuration list for PBXProject "aStar" */ = {
+		742513531D679CCC005E198C /* Build configuration list for PBXProject "AStar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7425136B1D679CCC005E198C /* Debug */,
@@ -575,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7425136D1D679CCC005E198C /* Build configuration list for PBXNativeTarget "aStar" */ = {
+		7425136D1D679CCC005E198C /* Build configuration list for PBXNativeTarget "AStar macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7425136E1D679CCC005E198C /* Debug */,
@@ -584,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		742513701D679CCC005E198C /* Build configuration list for PBXNativeTarget "aStarTests" */ = {
+		742513701D679CCC005E198C /* Build configuration list for PBXNativeTarget "AStarTests macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				742513711D679CCC005E198C /* Debug */,
@@ -593,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7443FCF31E26D449005EA77C /* Build configuration list for PBXNativeTarget "aStarMobile" */ = {
+		7443FCF31E26D449005EA77C /* Build configuration list for PBXNativeTarget "AStar iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7443FCF11E26D449005EA77C /* Debug */,
