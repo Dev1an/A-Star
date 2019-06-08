@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "742513581D679CCC005E198C"
-               BuildableName = "AStar macOS.framework"
+               BuildableName = "AStar.framework"
                BlueprintName = "AStar macOS"
                ReferencedContainer = "container:AStar.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "742513581D679CCC005E198C"
-            BuildableName = "AStar macOS.framework"
+            BuildableName = "AStar.framework"
             BlueprintName = "AStar macOS"
             ReferencedContainer = "container:AStar.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "742513581D679CCC005E198C"
-            BuildableName = "AStar macOS.framework"
+            BuildableName = "AStar.framework"
             BlueprintName = "AStar macOS"
             ReferencedContainer = "container:AStar.xcodeproj">
          </BuildableReference>

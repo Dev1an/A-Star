@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7443FCEB1E26D448005EA77C"
-               BuildableName = "AStar iOS.framework"
+               BuildableName = "AStar.framework"
                BlueprintName = "AStar iOS"
                ReferencedContainer = "container:AStar.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7443FCEB1E26D448005EA77C"
-            BuildableName = "AStar iOS.framework"
+            BuildableName = "AStar.framework"
             BlueprintName = "AStar iOS"
             ReferencedContainer = "container:AStar.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7443FCEB1E26D448005EA77C"
-            BuildableName = "AStar iOS.framework"
+            BuildableName = "AStar.framework"
             BlueprintName = "AStar iOS"
             ReferencedContainer = "container:AStar.xcodeproj">
          </BuildableReference>
