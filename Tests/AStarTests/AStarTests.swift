@@ -1,13 +1,13 @@
 //
-//  aStarTests.swift
-//  aStarTests
+//  AStarTests.swift
+//  AStarTests
 //
 //  Created by Damiaan Dufaux on 19/08/16.
 //  Copyright © 2016 Damiaan Dufaux. All rights reserved.
 //
 
 import XCTest
-@testable import aStar
+@testable import AStar
 import SpriteKit
 
 final class Simple2DNode: SKShapeNode, GraphNode {
@@ -27,7 +27,7 @@ final class Simple2DNode: SKShapeNode, GraphNode {
 }
 
 
-class aStarTests: XCTestCase {
+class AStarTests: XCTestCase {
     var nodes = SKNode()
 
     var c1, c2, c3, c4, c5: Simple2DNode!

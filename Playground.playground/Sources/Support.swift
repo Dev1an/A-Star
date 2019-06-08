@@ -1,4 +1,4 @@
-import aStar
+import AStar
 import SpriteKit
 import PlaygroundSupport
 

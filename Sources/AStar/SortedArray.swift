@@ -1,6 +1,6 @@
 //
 //  SortedArray.swift
-//  aStar
+//  AStar
 //
 //  Created by Damiaan Dufaux on 21/08/16.
 //  Copyright © 2016 Damiaan Dufaux. All rights reserved.

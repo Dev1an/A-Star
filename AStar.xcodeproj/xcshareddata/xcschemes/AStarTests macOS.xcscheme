@@ -17,9 +17,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "742513611D679CCC005E198C"
-               BuildableName = "aStarTests.xctest"
-               BlueprintName = "aStarTests"
-               ReferencedContainer = "container:aStar.xcodeproj">
+               BuildableName = "AStarTests macOS.xctest"
+               BlueprintName = "AStarTests macOS"
+               ReferencedContainer = "container:AStar.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

@@ -1,6 +1,6 @@
 //
 //  Node.swift
-//  aStar
+//  AStar
 //
 //  Created by Damiaan Dufaux on 19/08/16.
 //  Copyright © 2016 Damiaan Dufaux. All rights reserved.
