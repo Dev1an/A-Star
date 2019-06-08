@@ -8,60 +8,54 @@
 
 import XCTest
 @testable import AStar
-import SpriteKit
 
-final class Simple2DNode: SKShapeNode, GraphNode {
-    var connectedNodes = Set<Simple2DNode>()
+struct Point: Hashable {
+	var x, y: Float
+}
+
+final class Simple2DNode: GraphNode {
+	var position: Point
+	var connectedNodes: Set<Simple2DNode>
+
+	init(x: Float, y: Float, conncetions: Set<Simple2DNode> = []) {
+		self.position = Point(x: x, y: y)
+		connectedNodes = conncetions
+	}
     
     func cost(to node: Simple2DNode) -> Float {
-        return Float(hypot((position.x - node.position.x), (position.y - node.position.y)))
+        return hypot((position.x - node.position.x), (position.y - node.position.y))
     }
     
     func estimatedCost(to node: Simple2DNode) -> Float {
         return cost(to: node)
     }
-    
-    override var description: String {
-        return position.debugDescription
-    }
+
+	static func == (lhs: Simple2DNode, rhs: Simple2DNode) -> Bool {
+		return lhs === rhs
+	}
+
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(position)
+	}
 }
 
 
-class AStarTests: XCTestCase {
-    var nodes = SKNode()
-
+class aStarTests: XCTestCase {
     var c1, c2, c3, c4, c5: Simple2DNode!
-    
-    func createCircle(x: CGFloat, y: CGFloat) -> Simple2DNode {
-        let circle = Simple2DNode(circleOfRadius: 3)
-        (circle.position.x, circle.position.y) = (x, y)
-        circle.fillColor = .red
-        nodes.addChild(circle)
-        return circle
-    }
     
     func createConnection(from source: Simple2DNode, to target: Simple2DNode) {
         source.connectedNodes.insert(target)
-        let shape = SKShapeNode()
-        let line = CGMutablePath()
-        line.move(to: source.position)
-        line.addLine(to: target.position)
-        shape.path = line
-        shape.strokeColor = .darkGray
-        nodes.insertChild(shape, at: 0)
     }
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        nodes.position = CGPoint(x: 3, y: 3)
-        
-        c1 = createCircle(x: 50, y: 0)
-        c2 = createCircle(x: 50, y: 65)
-        c3 = createCircle(x: 30, y: 80)
-        c4 = createCircle(x: 65, y: 70)
-        c5 = createCircle(x: 65, y: 50)
+
+        c1 = Simple2DNode(x: 50, y: 0)
+        c2 = Simple2DNode(x: 50, y: 65)
+        c3 = Simple2DNode(x: 30, y: 80)
+        c4 = Simple2DNode(x: 65, y: 70)
+        c5 = Simple2DNode(x: 65, y: 50)
         
         createConnection(from: c1, to: c3)
         createConnection(from: c3, to: c4)
