@@ -104,6 +104,11 @@ class aStarTests: XCTestCase {
         XCTAssertEqual(otherPath[1], c3)
         XCTAssertEqual(otherPath[2], c4)
         XCTAssertEqual(otherPath[3], c2)
-        
     }
+
+	static var allTests = [
+		("testStraightPath", testStraightPath),
+		("testTwoSegmentPath", testTwoSegmentPath),
+		("testOptimalPath", testOptimalPath),
+	]
 }
