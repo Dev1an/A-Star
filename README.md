@@ -1,5 +1,5 @@
 # A-Star
-<a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat" alt="Swift" /></a>[![CircleCI](https://circleci.com/gh/Dev1an/A-Star/tree/master.svg?style=svg)](https://circleci.com/gh/Dev1an/A-Star/tree/master)
+<a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat" alt="Swift" /></a> [![CircleCI](https://circleci.com/gh/Dev1an/A-Star/tree/master.svg?style=svg)](https://circleci.com/gh/Dev1an/A-Star/tree/master)
 
 A* (A star) pathfinding algorithm implementation in Swift 5.0 (Playground included) using protocol oriented programming.
 
