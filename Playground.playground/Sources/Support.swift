@@ -28,7 +28,7 @@ public struct EndPoints: Hashable {
 		(source, target) = points
 	}
 
-	func hash(into hasher: inout Hasher) {
+	public func hash(into hasher: inout Hasher) {
 		hasher.combine(source)
 		hasher.combine(target)
 	}
