@@ -101,15 +101,15 @@ extension GraphNode {
             possibleSteps.sortedInsert(newElement: step)
         }
         
-        var path = [self]
+        var path = [Self]()
         while !possibleSteps.isEmpty {
             let step = possibleSteps.removeFirst()
             if step.node == goalNode {
                 var cursor = step
-                path.insert(step.node, at: 1)
+                path.insert(step.node, at: 0)
                 while let previous = cursor.previous {
                     cursor = previous
-                    path.insert(previous.node, at: 1)
+                    path.insert(previous.node, at: 0)
                 }
                 break
             }
@@ -127,6 +127,10 @@ extension GraphNode {
                     possibleSteps.sortedInsert(newElement: nextStep)
                 }
             }
+        }
+        
+        if path.count > 0 {
+            path.insert(self, at: 0)
         }
         
         return path
