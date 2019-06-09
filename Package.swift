@@ -22,7 +22,7 @@ let package = Package(
             name: "AStar",
             dependencies: []),
         .testTarget(
-            name: "AStarTests",
+            name: "AStartTests_macOS",
             dependencies: ["AStar"]),
     ]
 )

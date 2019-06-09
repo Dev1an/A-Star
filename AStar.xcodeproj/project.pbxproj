@@ -31,7 +31,7 @@
 		742513591D679CCC005E198C /* AStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7425135C1D679CCC005E198C /* AStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
 		7425135D1D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		742513621D679CCC005E198C /* AStarTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AStarTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		742513621D679CCC005E198C /* AStartTests_macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AStartTests_macOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		742513671D679CCC005E198C /* AStarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStarTests.swift; sourceTree = "<group>"; };
 		742513691D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		742513751D679D12005E198C /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				742513591D679CCC005E198C /* AStar.framework */,
-				742513621D679CCC005E198C /* AStarTests macOS.xctest */,
+				742513621D679CCC005E198C /* AStartTests_macOS.xctest */,
 				7443FCEC1E26D448005EA77C /* AStar.framework */,
 			);
 			name = Products;
@@ -195,7 +195,7 @@
 			);
 			name = "AStarTests macOS";
 			productName = aStarTests;
-			productReference = 742513621D679CCC005E198C /* AStarTests macOS.xctest */;
+			productReference = 742513621D679CCC005E198C /* AStartTests_macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		7443FCEB1E26D448005EA77C /* AStar iOS */ = {
@@ -499,7 +499,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStarTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AStartTests_macOS;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -513,7 +513,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStarTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AStartTests_macOS;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
