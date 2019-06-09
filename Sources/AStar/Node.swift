@@ -101,34 +101,36 @@ extension GraphNode {
             possibleSteps.sortedInsert(newElement: step)
         }
         
-        var path = [self]
-        while !possibleSteps.isEmpty {
-            let step = possibleSteps.removeFirst()
-            if step.node == goalNode {
-                var cursor = step
-                path.insert(step.node, at: 1)
-                while let previous = cursor.previous {
-                    cursor = previous
-                    path.insert(previous.node, at: 1)
-                }
-                break
-            }
-            eliminatedNodes.insert(step.node)
-            let nextNodes = step.node.connectedNodes.subtracting(eliminatedNodes)
-            for node in nextNodes {
-                // TODO don't generate a step because in some cases it is never used
-                let nextStep = Step(destination: node, previous: step, goal: goalNode)
-                let index = possibleSteps.binarySearch(element: nextStep)
-                if index<possibleSteps.count && possibleSteps[index] == nextStep {
-                    if nextStep.stepCost < possibleSteps[index].stepCost {
-                        possibleSteps[index].previous = step
+        var path = [Self]()
+        if !possibleSteps.isEmpty{
+            path.append(self)
+            while !possibleSteps.isEmpty {
+                let step = possibleSteps.removeFirst()
+                if step.node == goalNode {
+                    var cursor = step
+                    path.insert(step.node, at: 1)
+                    while let previous = cursor.previous {
+                        cursor = previous
+                        path.insert(previous.node, at: 1)
                     }
-                } else {
-                    possibleSteps.sortedInsert(newElement: nextStep)
+                    break
+                }
+                eliminatedNodes.insert(step.node)
+                let nextNodes = step.node.connectedNodes.subtracting(eliminatedNodes)
+                for node in nextNodes {
+                    // TODO don't generate a step because in some cases it is never used
+                    let nextStep = Step(destination: node, previous: step, goal: goalNode)
+                    let index = possibleSteps.binarySearch(element: nextStep)
+                    if index<possibleSteps.count && possibleSteps[index] == nextStep {
+                        if nextStep.stepCost < possibleSteps[index].stepCost {
+                            possibleSteps[index].previous = step
+                        }
+                    } else {
+                        possibleSteps.sortedInsert(newElement: nextStep)
+                    }
                 }
             }
         }
-        
         return path
     }
 	
