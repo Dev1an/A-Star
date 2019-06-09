@@ -129,7 +129,7 @@ extension GraphNode {
             }
         }
         
-        if path.count > 0 {
+        if path.count > 0 || goalNode == self{
             path.insert(self, at: 0)
         }
         
