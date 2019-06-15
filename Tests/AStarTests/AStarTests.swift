@@ -115,5 +115,6 @@ class AStarTests: XCTestCase {
 		("testStraightPath", testStraightPath),
 		("testTwoSegmentPath", testTwoSegmentPath),
 		("testOptimalPath", testOptimalPath),
+		("testEmptyPath", testEmptyPath)
 	]
 }
