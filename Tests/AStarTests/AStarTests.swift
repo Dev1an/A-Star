@@ -109,12 +109,5 @@ class AStarTests: XCTestCase {
     func testEmptyPath() {
         let path = c3.findPath(to: c5)
         XCTAssertEqual(path.count, 0)
-    }
-    
-	static var allTests = [
-		("testStraightPath", testStraightPath),
-		("testTwoSegmentPath", testTwoSegmentPath),
-		("testOptimalPath", testOptimalPath),
-		("testEmptyPath", testEmptyPath)
-	]
+    }    
 }
