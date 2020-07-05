@@ -19,14 +19,14 @@ final class Simple2DNode: SKShapeNode, GraphNode {
 	}
 }
 
-let view = SKView(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
+let view = SKView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
 PlaygroundPage.current.liveView = view
 
 let scene = SKScene(size: CGSize(width: 200, height: 200))
 scene.scaleMode = SKSceneScaleMode.aspectFit
 view.presentScene(scene)
 
-scene.backgroundColor = NSColor(red:0.97, green:0.97, blue:0.97, alpha:1.00)
+scene.backgroundColor = .init(red:0.97, green:0.97, blue:0.97, alpha:1.00)
 
 func makeCircle(x: CGFloat, y: CGFloat, label: String) -> Simple2DNode {
 	return Simple2DNode(circleOfRadius: 3)

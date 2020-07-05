@@ -7,8 +7,8 @@ Add pathfinding to your graph just by implementing the 3 requirements of the [Gr
 
 ## Playground
 
-- To try the playground open: AStar.xcodeproj
-- Build the framework (`command` + `b`)
+- To use the playground: open AStar.xcodeproj
+- Build the macOS framework (select the `AStar macOS` targer and press `command` + `b`)
 - Click on Playground.playground
 
 ![Playground](docs/Playground.png)
