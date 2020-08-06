@@ -10,11 +10,15 @@
 		742513631D679CCC005E198C /* AStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742513591D679CCC005E198C /* AStar.framework */; };
 		742513681D679CCC005E198C /* AStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513671D679CCC005E198C /* AStarTests.swift */; };
 		7425136A1D679CCC005E198C /* AStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7425135C1D679CCC005E198C /* AStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		742513761D679D12005E198C /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513751D679D12005E198C /* Node.swift */; };
 		742513781D69DEDC005E198C /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513771D69DEDC005E198C /* SortedArray.swift */; };
 		7443FCF01E26D449005EA77C /* AStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7443FCEE1E26D449005EA77C /* AStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7443FCF41E26D465005EA77C /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513751D679D12005E198C /* Node.swift */; };
 		7443FCF51E26D468005EA77C /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513771D69DEDC005E198C /* SortedArray.swift */; };
+		746C5A7E24DCBDA100853765 /* Step+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C5A7B24DCBDA100853765 /* Step+Comparable.swift */; };
+		746C5A7F24DCBDA100853765 /* Step+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C5A7B24DCBDA100853765 /* Step+Comparable.swift */; };
+		746C5A8024DCBDA100853765 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C5A7C24DCBDA100853765 /* Graph.swift */; };
+		746C5A8124DCBDA100853765 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C5A7C24DCBDA100853765 /* Graph.swift */; };
+		746C5A8224DCBDA100853765 /* SimpleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C5A7D24DCBDA100853765 /* SimpleNode.swift */; };
+		746C5A8324DCBDA100853765 /* SimpleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C5A7D24DCBDA100853765 /* SimpleNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +38,14 @@
 		742513621D679CCC005E198C /* AStarTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AStarTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		742513671D679CCC005E198C /* AStarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStarTests.swift; sourceTree = "<group>"; };
 		742513691D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		742513751D679D12005E198C /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		742513771D69DEDC005E198C /* SortedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
 		7443FCEC1E26D448005EA77C /* AStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7443FCEE1E26D449005EA77C /* AStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
 		7443FCEF1E26D449005EA77C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7446343A20AAFB3A00B63771 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		746C5A7B24DCBDA100853765 /* Step+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Step+Comparable.swift"; sourceTree = "<group>"; };
+		746C5A7C24DCBDA100853765 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		746C5A7D24DCBDA100853765 /* SimpleNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNode.swift; sourceTree = "<group>"; };
 		74D2FBD01F4EFBFB00A48C44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		74DF854C22AA9DB20051BE5D /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		74DF854E22AA9DB90051BE5D /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
@@ -134,7 +140,9 @@
 		74DF855022AAA1B30051BE5D /* AStar */ = {
 			isa = PBXGroup;
 			children = (
-				742513751D679D12005E198C /* Node.swift */,
+				746C5A7C24DCBDA100853765 /* Graph.swift */,
+				746C5A7D24DCBDA100853765 /* SimpleNode.swift */,
+				746C5A7B24DCBDA100853765 /* Step+Comparable.swift */,
 				742513771D69DEDC005E198C /* SortedArray.swift */,
 			);
 			path = AStar;
@@ -294,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746C5A8024DCBDA100853765 /* Graph.swift in Sources */,
 				742513781D69DEDC005E198C /* SortedArray.swift in Sources */,
-				742513761D679D12005E198C /* Node.swift in Sources */,
+				746C5A7E24DCBDA100853765 /* Step+Comparable.swift in Sources */,
+				746C5A8224DCBDA100853765 /* SimpleNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746C5A8124DCBDA100853765 /* Graph.swift in Sources */,
 				7443FCF51E26D468005EA77C /* SortedArray.swift in Sources */,
-				7443FCF41E26D465005EA77C /* Node.swift in Sources */,
+				746C5A7F24DCBDA100853765 /* Step+Comparable.swift in Sources */,
+				746C5A8324DCBDA100853765 /* SimpleNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

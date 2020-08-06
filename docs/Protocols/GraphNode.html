@@ -14,7 +14,7 @@
     <a title="GraphNode Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (91% documented)</p>
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/Dev1an/A-Star"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -29,16 +29,11 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/Step.html">Step</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Graph.html">Graph</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Protocols/GraphNode.html">GraphNode</a>
               </li>
@@ -52,21 +47,61 @@
             <h1>GraphNode</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">GraphNode</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">GraphNode</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Graph.html">Graph</a></span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
 
                 </div>
               </div>
-            <p>This protocol declares the requirements for optimal pathfinding in a directed graph of nodes and implements the A* algorithm via an extension.</p>
+            <p>A simplified version of the <code><a href="../Protocols/Graph.html">Graph</a></code>  protocol that allows optimal path finding between nodes without the need of a containing <code><a href="../Protocols/Graph.html">Graph</a></code> type.</p>
+
+<p>Use this protocol instead of <code><a href="../Protocols/Graph.html">Graph</a></code> if your nodes store their outgoing edges.</p>
+
+<p>When your nodes do not store edge information, consider using the <code><a href="../Protocols/Graph.html">Graph</a></code> protocol.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5AStar9GraphNodeP0C0Qa"></a>
+                    <a name="//apple_ref/swift/Alias/Node" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5AStar9GraphNodeP0C0Qa">Node</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>In a <code>GraphNode</code> <code><a href="../Protocols/Graph.html">Graph</a></code> the nodes are of type <code>GraphNode</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Node</span> <span class="o">=</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
               <div class="task-name-container">
                 <a name="/Optimal%20pathfinding%20requirements"></a>
                 <a name="//apple_ref/swift/Section/Optimal pathfinding requirements" class="dashAnchor"></a>
-                <a href="#/Optimal%20pathfinding%20requirements">
-                  <h3 class="section-name">Optimal pathfinding requirements</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Optimal%20pathfinding%20requirements"></a>
+                  <h3 class="section-name"><p>Optimal pathfinding requirements</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -94,7 +129,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Node.swift#L17">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -104,7 +139,7 @@
                     <code>
                     <a name="/s:5AStar9GraphNodeP13estimatedCost2toSfx_tF"></a>
                     <a name="//apple_ref/swift/Method/estimatedCost(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5AStar9GraphNodeP13estimatedCost2toSfx_tF">estimatedCost(to:)</a>
+                    <a class="token" href="#/s:5AStar9GraphNodeP13estimatedCost2toSfx_tF">estimatedCost(to:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -112,7 +147,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the estimated heuristic cost to reach the indicated node from this node</p>
+                        <p>Returns the estimated/heuristic cost to reach the indicated node from this node</p>
 
                       </div>
                       <div class="declaration">
@@ -147,7 +182,7 @@
                         <p>the heuristic cost</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Node.swift#L24">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -157,7 +192,7 @@
                     <code>
                     <a name="/s:5AStar9GraphNodeP4cost2toSfx_tF"></a>
                     <a name="//apple_ref/swift/Method/cost(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5AStar9GraphNodeP4cost2toSfx_tF">cost(to:)</a>
+                    <a class="token" href="#/s:5AStar9GraphNodeP4cost2toSfx_tF">cost(to:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -199,7 +234,7 @@
                         <p>the actual cost to reach the indicated node from this node</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Node.swift#L29">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -208,19 +243,130 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/A*%20Implementation"></a>
-                <a name="//apple_ref/swift/Section/A* Implementation" class="dashAnchor"></a>
-                <a href="#/A*%20Implementation">
-                  <h3 class="section-name">A* Implementation</h3>
-                </a>
+                <a name="/Available%20where%20%60Node%60%20%3D%3D%20%60Self%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Node` == `Self`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Node%60%20%3D%3D%20%60Self%60"></a>
+                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/GraphNode.html#/s:5AStar9GraphNodeP0C0Qa">Node</a></code> == <code>Self</code></p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5AStar9GraphNodePAAE8findPath2toSayxGx_tF"></a>
+                    <a name="/s:5AStar5GraphP13nodesAdjacent2toShy4NodeQzGAG_tF"></a>
+                    <a name="//apple_ref/swift/Method/nodesAdjacent(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5AStar5GraphP13nodesAdjacent2toShy4NodeQzGAG_tF">nodesAdjacent(to:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nodesAdjacent</span><span class="p">(</span><span class="n">to</span> <span class="nv">node</span><span class="p">:</span> <span class="kt"><a href="../Protocols/GraphNode.html#/s:5AStar9GraphNodeP0C0Qa">Node</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/GraphNode.html#/s:5AStar9GraphNodeP0C0Qa">Node</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L42-L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5AStar5GraphP13estimatedCost4from2toSf4NodeQz_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/estimatedCost(from:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5AStar5GraphP13estimatedCost4from2toSf4NodeQz_AHtF">estimatedCost(from:<wbr>to:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">estimatedCost</span><span class="p">(</span><span class="n">from</span> <span class="nv">start</span><span class="p">:</span> <span class="kt"><a href="../Protocols/GraphNode.html#/s:5AStar9GraphNodeP0C0Qa">Node</a></span><span class="p">,</span> <span class="n">to</span> <span class="nv">end</span><span class="p">:</span> <span class="kt"><a href="../Protocols/GraphNode.html#/s:5AStar9GraphNodeP0C0Qa">Node</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L46-L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5AStar5GraphP4cost4from2toSf4NodeQz_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/cost(from:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5AStar5GraphP4cost4from2toSf4NodeQz_AHtF">cost(from:<wbr>to:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cost</span><span class="p">(</span><span class="n">from</span> <span class="nv">start</span><span class="p">:</span> <span class="kt"><a href="../Protocols/GraphNode.html#/s:5AStar9GraphNodeP0C0Qa">Node</a></span><span class="p">,</span> <span class="n">to</span> <span class="nv">end</span><span class="p">:</span> <span class="kt"><a href="../Protocols/GraphNode.html#/s:5AStar9GraphNodeP0C0Qa">Node</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L50-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/A%2A%20Implementation"></a>
+                <a name="//apple_ref/swift/Section/A* Implementation" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/A%2A%20Implementation"></a>
+                  <h3 class="section-name"><p>A* Implementation</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5AStar9GraphNodePAA0C0QzRszrlE8findPath2toSayxGx_tF"></a>
                     <a name="//apple_ref/swift/Method/findPath(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5AStar9GraphNodePAAE8findPath2toSayxGx_tF">findPath(to:)</a>
+                    <a class="token" href="#/s:5AStar9GraphNodePAA0C0QzRszrlE8findPath2toSayxGx_tF">findPath(to:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -233,7 +379,7 @@
                       <div class="abstract">
                         <p>Attempts to find the optimal path between this node and the indicated goal node.
 If such a path exists, it is returned in start to end order.
-If it doesn&rsquo;t exist, the array returned will be empty.</p>
+If it doesn&rsquo;t exist, the returned array will be empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -268,7 +414,7 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
                         <p>the optimal path between this node and the indicated goal node</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Node.swift#L95-L133">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L62-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -276,9 +422,9 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5AStar9GraphNodePAAE8findPath4fromSayxGx_tF"></a>
+                    <a name="/s:5AStar9GraphNodePAA0C0QzRszrlE8findPath4fromSayxGx_tF"></a>
                     <a name="//apple_ref/swift/Method/findPath(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5AStar9GraphNodePAAE8findPath4fromSayxGx_tF">findPath(from:)</a>
+                    <a class="token" href="#/s:5AStar9GraphNodePAA0C0QzRszrlE8findPath4fromSayxGx_tF">findPath(from:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -324,7 +470,7 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
                         <p>the optimal path between the indicated start node and this node</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Node.swift#L140-L142">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/SimpleNode.swift#L71-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -334,8 +480,8 @@ If it doesn&rsquo;t exist, the array returned will be empty.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-08)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-08-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
