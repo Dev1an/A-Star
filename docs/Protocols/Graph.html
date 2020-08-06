@@ -164,6 +164,16 @@
                       <div class="abstract">
                         <p>The estimated/<strong>heuristic</strong> cost to reach the indicated end node from a given start node</p>
 
+<p>The way you implement the estimation of the cost will impact the efficiency of the path finding algorithm.</p>
+
+<p><strong>Admissibility</strong>:</p>
+
+<p>When the <code>estimatedCost</code> <strong>never overestimates</strong> the actual cost, the <code><a href="../Protocols/Graph.html#/s:5AStar5GraphPAAE8findPath4from2toSay4NodeQzGAH_AHtF">findPath(from:to:)</a></code> method will find the <strong>optimal</strong> path.</p>
+
+<p><strong>Monotonicity</strong></p>
+
+<p>When the <code>estimatedCost</code> is a <strong>monotone</strong> decreasing funciton, the <code><a href="../Protocols/Graph.html#/s:5AStar5GraphPAAE8findPath4from2toSay4NodeQzGAH_AHtF">findPath(from:to:)</a></code> method is guaranteed to find an optimal path without processing any node more than once. The function is said to be <strong>monotone decreasing</strong> when <code>estimatedCost(from: start, to: end) &lt;= cost(from: start, to: intermediate) + estimatedCost(from: intermediate, to: end)</code> for every edge (<code>start</code>, <code>intermediate</code>).</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -205,7 +215,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Graph.swift#L23">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Graph.swift#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -266,7 +276,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Graph.swift#L29">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Graph.swift#L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -349,7 +359,7 @@ If it doesn&rsquo;t exist, the returned array will be empty.</p>
                         <p>An optimal path between start and goal if it exists, otherwise an empty array.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Graph.swift#L42-L84">Show on GitHub</a>
+                        <a href="https://github.com/Dev1an/A-Star/blob/master//Sources/AStar/Graph.swift#L53-L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
