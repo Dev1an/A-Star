@@ -17,6 +17,17 @@ public protocol Graph {
 	func nodesAdjacent(to node: Node) -> Set<Node>
 
 	/// The estimated/**heuristic** cost to reach the indicated end node from a given start node
+	///
+	/// The way you implement the estimation of the cost will impact the efficiency of the path finding algorithm.
+	///
+	/// **Admissibility**:
+	///
+	/// When the `estimatedCost` **never overestimates** the actual cost, the `findPath(from:to:)` method will find the **optimal** path.
+	///
+	/// **Monotonicity**
+	///
+	/// When the `estimatedCost` is a **monotone** decreasing funciton, the `findPath(from:to:)` method is guaranteed to find an optimal path without processing any node more than once. The function is said to be **monotone decreasing** when `estimatedCost(from: start, to: end) <= cost(from: start, to: intermediate) + estimatedCost(from: intermediate, to: end)` for every edge (`start`, `intermediate`).
+	///
 	/// - Parameters:
 	///   - start: the starting point of the path who's cost is to be estimated
 	///   - end: the end point of the path who's cost is to be estimated
