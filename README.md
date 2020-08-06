@@ -3,7 +3,7 @@
 
 A* (A star) pathfinding algorithm implementation in Swift 5.0 (Playground included) using protocol oriented programming.
 
-Add pathfinding to your graph just by implementing the 3 requirements of the [GraphNode protocol](https://dev1an.github.io/A-Star/Protocols/GraphNode.html).
+Add pathfinding to your graph just by implementing the 3 requirements of the [Graph protocol](https://dev1an.github.io/A-Star/Protocols/Graph.html).
 
 ## Playground
 
