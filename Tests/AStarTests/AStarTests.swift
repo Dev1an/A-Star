@@ -14,6 +14,8 @@ struct Point: Hashable {
 }
 
 final class Simple2DNode: GraphNode {
+	typealias Cost = Float
+
 	var position: Point
 	var connectedNodes: Set<Simple2DNode>
 
@@ -105,7 +107,7 @@ class AStarTests: XCTestCase {
         XCTAssertEqual(otherPath[2], c4)
         XCTAssertEqual(otherPath[3], c2)
     }
-    
+
     func testEmptyPath() {
         let path = c3.findPath(to: c5)
         XCTAssertEqual(path.count, 0)

@@ -29,12 +29,12 @@ public protocol GraphNode: Graph, Hashable {
 	///
 	/// - Parameter node: the end point of the edge who's cost is to be estimated
 	/// - Returns: the heuristic cost
-	func estimatedCost(to node: Self) -> Float
+	func estimatedCost(to node: Self) -> Cost
 
 
 	/// - Parameter node: the destination node
 	/// - Returns: the actual cost to reach the indicated node from this node
-	func cost(to node: Self) -> Float
+	func cost(to node: Self) -> Cost
 }
 
 extension GraphNode where Node == Self {
@@ -43,11 +43,11 @@ extension GraphNode where Node == Self {
 		node.connectedNodes
 	}
 
-	public func estimatedCost(from start: Node, to end: Node) -> Float {
+	public func estimatedCost(from start: Node, to end: Node) -> Cost {
 		start.estimatedCost(to: end)
 	}
 
-	public func cost(from start: Node, to end: Node) -> Float {
+	public func cost(from start: Node, to end: Node) -> Cost {
 		start.cost(to: end)
 	}
 

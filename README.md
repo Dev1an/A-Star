@@ -1,7 +1,7 @@
 # A-Star
 <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat" alt="Swift" /></a> [![CircleCI](https://circleci.com/gh/Dev1an/A-Star/tree/master.svg?style=svg)](https://circleci.com/gh/Dev1an/A-Star/tree/master)
 
-A* (A star) pathfinding algorithm implementation in Swift 5.0 (Playground included) using protocol oriented programming.
+Protocol oriented A* (A star) pathfinding algorithm implementation in Swift 5 (Playground included).
 
 Add pathfinding to your graph just by implementing the 3 requirements of the [Graph protocol](https://dev1an.github.io/A-Star/Protocols/Graph.html).
 

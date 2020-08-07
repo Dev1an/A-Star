@@ -9,6 +9,7 @@
 public protocol Graph {
 	/// The type for the nodes or points in the graph
 	associatedtype Node: Hashable
+	associatedtype Cost: FloatingPoint
 
 	// MARK: Optimal pathfinding requirements
 
@@ -31,13 +32,13 @@ public protocol Graph {
 	/// - Parameters:
 	///   - start: the starting point of the path who's cost is to be estimated
 	///   - end: the end point of the path who's cost is to be estimated
-	func estimatedCost(from start: Node, to end: Node) -> Float
+	func estimatedCost(from start: Node, to end: Node) -> Cost
 
 	/// The **actual** cost to reach the indicated end node from a given start node
 	/// - Parameters:
 	///   - start: the starting point of the path who's cost is to be estimated
 	///   - end: the end point of the path who's cost is to be estimated
-	func cost(from start: Node, to end: Node) -> Float
+	func cost(from start: Node, to end: Node) -> Cost
 }
 
 extension Graph {
@@ -51,26 +52,20 @@ extension Graph {
 	///   - goalNode: the goal node of the pathfinding attempt
 	/// - Returns: An optimal path between start and goal if it exists, otherwise an empty array.
 	public func findPath(from startNode: Node, to goalNode: Node) -> [Node] {
-		var possibleSteps = [Step<Node>]()
+		guard startNode != goalNode else { return [goalNode] }
+
+		var possibleSteps = [Step<Node, Cost>]()
 		var eliminatedNodes: Set = [startNode]
 
+		let firstStep = Step(to: startNode, stepCost: Cost.zero, goalCost: .zero)
 		for connectedNode in nodesAdjacent(to: startNode) {
-			let step = createStep(from: startNode, to: connectedNode, goal: goalNode)
+			let step = createStep(from: firstStep, to: connectedNode, goal: goalNode)
 			possibleSteps.sortedInsert(newElement: step)
 		}
 
-		var path = [Node]()
 		while !possibleSteps.isEmpty {
 			let step = possibleSteps.removeFirst()
-			if step.node == goalNode {
-				var cursor = step
-				path.insert(step.node, at: 0)
-				while let previous = cursor.previous {
-					cursor = previous
-					path.insert(previous.node, at: 0)
-				}
-				break
-			}
+			guard step.node != goalNode else { return reconstructPath(from: step) }
 			eliminatedNodes.insert(step.node)
 			let nextNodes = nodesAdjacent(to: step.node).subtracting(eliminatedNodes)
 			for node in nextNodes {
@@ -87,22 +82,10 @@ extension Graph {
 			}
 		}
 
-		if path.count > 0 || goalNode == startNode {
-			path.insert(startNode, at: 0)
-		}
-
-		return path
+		return []
 	}
 
-	func createStep(from start: Node, to destination: Node, goal: Node) -> Step<Node> {
-		Step(
-			to: destination,
-			stepCost: cost(from: start, to: destination),
-			goalCost: estimatedCost(from: destination, to: goal)
-		)
-	}
-
-	func createStep(from start: Step<Node>, to destination: Node, goal: Node) -> Step<Node> {
+	func createStep(from start: Step<Node, Cost>, to destination: Node, goal: Node) -> Step<Node, Cost> {
 		Step(
 			from: start,
 			to: destination,
@@ -110,28 +93,47 @@ extension Graph {
 			goalCost: estimatedCost(from: destination, to: goal)
 		)
 	}
+
+	func reconstructPath(from steps: Step<Node, Cost>) -> [Node] {
+		let totalSteps = steps.index + 1
+		return Array(unsafeUninitializedCapacity: totalSteps) { (buffer, count) in
+			var cursor = steps
+			var pointer = buffer.baseAddress!.advanced(by: steps.index)
+			while let previous = cursor.previous {
+				pointer.initialize(to: cursor.node)
+				pointer = pointer.advanced(by: -1)
+				cursor = previous
+			}
+			assert(pointer == buffer.baseAddress, "incrorrect step list")
+			pointer.initialize(to: cursor.node)
+			count = totalSteps
+		}
+	}
 }
 
-class Step<Node: Hashable> {
-	var node: Node
-	var previous: Step<Node>?
+class Step<Node: Hashable, Cost: FloatingPoint> {
+	let node: Node
+	var previous: Step<Node, Cost>?
+	let index: Int
 
-	var stepCost: Float
-	var goalCost: Float
+	let stepCost: Cost
+	let goalCost: Cost
 
-	init(to destination: Node, stepCost: Float, goalCost: Float) {
+	init(to destination: Node, stepCost: Cost, goalCost: Cost) {
 		node = destination
 		self.stepCost = stepCost
 		self.goalCost = goalCost
+		index = 0
 	}
 
-	init(from previous: Step<Node>, to node: Node, stepCost: Float, goalCost: Float) {
+	init(from previous: Step<Node, Cost>, to node: Node, stepCost: Cost, goalCost: Cost) {
 		(self.node, self.previous) = (node, previous)
 		self.stepCost = stepCost
 		self.goalCost = goalCost
+		index = previous.index + 1
 	}
 
-	func cost() -> Float {
+	func cost() -> Cost {
 		return stepCost + goalCost
 	}
 }

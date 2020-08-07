@@ -31,7 +31,6 @@ extension Array {
     mutating func sortedInsert(element: Element, predicate: (Element, Element) -> Bool) {
         insert(element, at: binarySearch{predicate($0, element)} )
     }
-    
 }
 
 extension Array where Element: Comparable {
