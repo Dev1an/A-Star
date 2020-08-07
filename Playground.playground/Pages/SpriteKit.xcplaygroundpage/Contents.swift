@@ -1,5 +1,4 @@
-//: Playground - noun: a place where people can play
-
+//: [Next (Board game with using SwiftUI) →](@next)
 import AStar
 import SpriteKit
 import PlaygroundSupport
